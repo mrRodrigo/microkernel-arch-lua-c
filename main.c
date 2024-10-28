@@ -19,7 +19,7 @@ int main(void)
     L = luaL_newstate();                        
     luaL_openlibs(L);                           
 
-    if (luaL_loadfile(L, "src/core/lua/plugin_loader.lua")) 
+    if (luaL_loadfile(L, "src/core/lua/plugin_registry.lua")) 
         bail(L, "luaL_loadfile() failed");      
 
     if (lua_pcall(L, 0, 0, 0))                  
@@ -36,8 +36,6 @@ int main(void)
     
     if (lua_pcall(L, 1, 0, 0))
       bail(L, "lua_pcall() failed");
-
-
 
     lua_close(L);                               
     return 0;
