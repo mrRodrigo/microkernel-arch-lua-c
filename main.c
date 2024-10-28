@@ -32,7 +32,12 @@ int main(void)
       bail(L, "lua_pcall() failed");          
 
     lua_getglobal(L, "RunPlugin");
-    lua_pushstring(L, "hello");
+
+
+    // TEST PLUGIN CALL
+    char *PLUGIN_NAME = "hello";
+
+    lua_pushstring(L, PLUGIN_NAME);
     
     if (lua_pcall(L, 1, 0, 0))
       bail(L, "lua_pcall() failed");
