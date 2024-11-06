@@ -5,4 +5,7 @@ https://www.oreilly.com/library/view/software-architecture-patterns/978109813428
 
 
 
-With core compiled, plugins can be added in execution time without re-compile.
+With core compiled, plugins can be added in execution time without re-compile, passing as arg to core.
+
+
+`core hello`
